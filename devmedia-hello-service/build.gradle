@@ -19,6 +19,7 @@ jar {
         version '1.0.0'
         vendor 'DEVMEDIA'
         instruction 'Import-Package', 'org.osgi.framework;version="[1.8,2)"'
+    	instruction 'Bundle-Activator', 'br.com.devmedia.hello.service.impl.HelloServiceActivator'
     	instructionReplace 'Export-Package', 'br.com.devmedia.hello.service'
     }
     archiveName 'devmedia-hello-service.jar'
