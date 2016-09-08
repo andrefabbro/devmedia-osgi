@@ -21,4 +21,5 @@ jar {
         instruction 'Import-Package', 'org.osgi.framework;version="[1.8,2)"'
     	instructionReplace 'Export-Package', 'br.com.devmedia.hello.service'
     }
+    archiveName 'devmedia-hello-service.jar'
 }
