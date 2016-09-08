@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'osgi'
+
+repositories {
+	mavenLocal()
+    jcenter()
+}
+
+dependencies {
+	compile 'org.osgi:org.osgi.core:6.0.0'
+	compile 'br.com.devmedia:devmedia-hello-service:1.0.0'
+}
+
+jar {
+    manifest {
+    	name 'Devmedia OSGi Exemplo'
+        version '1.0.0'
+        vendor 'DEVMEDIA'
+        instruction 'Bundle-Activator', 'br.com.devmedia.osgi.exemplo.Activator'
+        instruction 'Import-Package', 'org.osgi.framework;version="[1.8,2)",br.com.devmedia.hello.service'
+    }
+}
